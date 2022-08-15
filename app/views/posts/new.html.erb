@@ -1,4 +1,15 @@
 <%= form_with model: @post do |form| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being created:</h2>
+      <ul>
+        <% @user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div>
     <%= form.label :title %>
     <%= form.text_field :title, placeholder: "Your Title Here" %>
