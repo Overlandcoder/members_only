@@ -3,7 +3,14 @@
 <ul>
   <% @posts.each do |post| %>
     <li>
-      <%= link_to post.title, post %>
+      <p>Title: <%= link_to post.title, post %></p>
+    </li>
+    <li>
+      <p>Author: 
+        <% if user_signed_in? %>
+          <%= post.user.email %>
+        <% end %>
+      </p>
     </li>
   <% end %>
 </ul>
