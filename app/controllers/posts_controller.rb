@@ -1,5 +1,13 @@
 class PostsController < ApplicationController
-  # before_action :require_login
+  def index
+    @post = Post.all
+  end
+
+  def show
+    @post = Post.find(params[:id])
+  end
+
+  before_action :authenticate_user!
 
   def new
     @post = Post.new
