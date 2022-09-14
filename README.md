@@ -1,24 +1,5 @@
-# README
+# Members Only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is for the Members Only project from The Odin Project's Ruby on Rails curriculum. Find it at http://www.theodinproject.com.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The goal here is to build an "exclusive clubhouse" where members can write anonymous posts. Only members can see who the author of a post is. Non-members (those who are not logged in) can only see the post and will be left wondering who the author is. This will be accomplished by using Devise as an authentication system.
